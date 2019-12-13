@@ -10,7 +10,6 @@ router.post('/', [authmiddleware, supermiddleware], async (req, res) => {
     try {
         const newEvent = new Event({
             name: req.body.name
-            , attendance: req.body.attendance
             , date: new Date(req.body.date)
             , user: [req.body.user]
         });
